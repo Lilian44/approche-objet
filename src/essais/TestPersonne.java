@@ -17,27 +17,19 @@ public class TestPersonne {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		AdressePostale ap1 = new AdressePostale();
-		ap1.numeroRue = 5;
-		ap1.libelleRue = "des Maréchaux";
-		ap1.codePostal = 44100;
-		ap1.ville = "Nantes";
+
+		AdressePostale a1 = new AdressePostale(5, "rue de canal", 44160, "blabla");
+		Personne people1 = new Personne("Guépin", "Lilian");
+		Personne people2 = new Personne("Guépin", "Lilian", a1);
+		Personne majPeople = new Personne("Guépin", "Lilian");
+		String maj= majPeople.maj("Lilian", "Lilian");
+		System.out.println(maj);
+
 		
-		AdressePostale ap2 = new AdressePostale();
-		ap2.numeroRue = 85;
-		ap2.libelleRue = "d’Antrain";
-		ap2.codePostal = 35700;
-		ap2.ville = "Rennes";
+		people1.setPrenom("STéphanie");
+		System.out.println(people1.prenom);
 		
-		Personne people1 = new Personne();
-		people1.name = "Guépin";
-		people1.prenom = "Lilian";
-		people1.adressePostale =ap1;
-		
-		Personne people2 = new Personne();
-		people1.name = "Bernard";
-		people1.prenom = "Dupont";
-		people1.adressePostale =ap2;
+		people2.setAdressePostale(new AdressePostale(1, "rue blabla", 44200, "nantes"));
 		
 	}
 
