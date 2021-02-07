@@ -2,7 +2,7 @@ package fr.diginamic.essais;
 
 import fr.diginamic.maison.*;
 import fr.diginamic.maison.Maison;
-import fr.diginamic.maison.Piece;
+
 
 public class TestMaison {
 	public static void main(String[] args) {
@@ -12,14 +12,12 @@ public class TestMaison {
 		Chambre ch2 = new Chambre(14, 0);
 		
 
-		Piece[] test = {ch,cui,ch2};
-
-
-
-		Maison littleHome = new Maison(test);
+		Maison littleHome = new Maison();
 //		littleHome.getSuperficieTotale();
 //		littleHome.superficieEtage(0);
 		littleHome.ajouterPiece(cui);
+		littleHome.ajouterPiece(ch);
+		littleHome.ajouterPiece(ch2);
 		
 		littleHome.superfSpecificPiece("chambre");
 		littleHome.nbrTypePiece("chambre");

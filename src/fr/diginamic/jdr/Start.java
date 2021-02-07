@@ -19,14 +19,14 @@ public class Start {
 		int pdv = obj.nextInt(30) + 21;
 
 		Personnage player = new Personnage(perso, force, pdv);
-		System.out.println(player.name + " a " + player.force + "points de force et " + player.pdv + " points de vie");
+		System.out.println(player.getName() + " a " + player.getForce() + "points de force et " + player.getPdv() + " points de vie");
 		play(player);
 
 	}
 
 	public static void play(Personnage hero) {
-		while (hero.pdv > 0) {
-			System.out.println("choisisez votre ennemi : ");
+		while (hero.getPdv() > 0) {
+			System.out.println("choisisez votre ennemi ( loup, gobelin ou troll) : ");
 			Scanner scanner = new Scanner(System.in);
 			String perso = scanner.nextLine();
 
@@ -34,14 +34,17 @@ public class Start {
 			case "loup": {
 
 				Attaques.fightLoup(hero);
+				break;
 			}
 			case "gobelin": {
 
 				Attaques.fightGobelin(hero);
+				break;
 			}
 			case "troll": {
 
 				Attaques.fightTroll(hero);
+				break;
 			}
 			default:
 				break;

@@ -3,14 +3,14 @@ package fr.diginamic.maison;
 public class Maison {
 	public Piece[] rooms;
 
-	public Maison(Piece[] rooms) {
+	public Maison() {
 		super();
 		this.rooms = rooms;
 
 	}
 
 	public void ajouterPiece(Piece piece) {
-		if (piece != null && piece.etage > -1 && piece.superficie > 0) {
+		if (piece != null && piece.getEtage() > -1 && piece.getSuperficie() > 0) {
 
 			Piece[] newRoom = new Piece[rooms.length + 1];
 			for (int i = 0; i <= rooms.length - 1; i++) {
@@ -26,8 +26,8 @@ public class Maison {
 	public double getSuperficieTotale() {
 		double superficieTotale = 0;
 		for (int i = 0; i <= this.rooms.length - 1; i++) {
-			superficieTotale += rooms[i].superficie;
-			System.out.println(rooms[i].superficie);
+			superficieTotale += rooms[i].getSuperficie();
+//			System.out.println(rooms[i].superficie);
 		}
 //		System.err.println(superficieTotale);
 		return superficieTotale;
@@ -36,8 +36,8 @@ public class Maison {
 	public double superficieEtage(int etg) {
 		double superficieEtage = 0;
 		for (int i = 0; i <= this.rooms.length - 1; i++) {
-			if (rooms[i].etage == etg) {
-				superficieEtage += rooms[i].superficie;
+			if (rooms[i].getEtage() == etg) {
+				superficieEtage += rooms[i].getSuperficie();
 			}
 		}
 		System.out.println("la superficie de l'étage" + etg + " est de " + superficieEtage + "m²");
@@ -49,7 +49,7 @@ public class Maison {
 		double superfPiece = 0;
 		for (int i = 0; i <= rooms.length - 1; i++) {
 			if (rooms[i].afficherType() == typePiece) {
-				superfPiece+= rooms[i].superficie;
+				superfPiece+= rooms[i].getSuperficie();
 
 			}
 		}
