@@ -22,5 +22,9 @@ public class TestTri {
 	//	Collections.sort( villes);
 		Collections.sort(villes,new ComparatorNom());
 		System.out.println(villes);
+		
+	
+		
+		
 	}
 }

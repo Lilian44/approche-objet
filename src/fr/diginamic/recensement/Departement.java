@@ -1,5 +1,11 @@
 package fr.diginamic.recensement;
 
+/** 
+ * Classe servant à la création d'un objet Département, il a comme attributs le numéro du 
+ * ainsi que son nombre d'habtiants
+ * 
+ */
+
 public class Departement {
 	String dprtmt;
 	int Habitants;

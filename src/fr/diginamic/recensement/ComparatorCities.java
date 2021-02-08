@@ -2,6 +2,12 @@ package fr.diginamic.recensement;
 
 import java.util.Comparator;
 
+/** 
+ * Comparateur qui permet de trié par ordre de gandeur le nombre d'habitants
+ * 
+ */
+
+
 public class ComparatorCities implements Comparator<Ville> {
 
 	@Override
