@@ -67,7 +67,7 @@ public class TheatrePro {
 	}
 
 	public double getRecetteTotale() {
-
+		this.recetteTotale=0;
 		for (int i = 0; i <= allShow.length - 1; i++) {
 			recetteTotale += allShow[i].getNbrInscrits() * allShow[i].getTarif();
 		}
@@ -83,6 +83,26 @@ public class TheatrePro {
 		}
 		System.out.println("il y au total : " + clientsTotal + " de personnes inscrites");
 		return clientsTotal;
+	}
+
+	public String getNom() {
+		return nom;
+	}
+
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+
+	public Spectacle[] getAllShow() {
+		return allShow;
+	}
+
+	public void setAllShow(Spectacle[] allShow) {
+		this.allShow = allShow;
+	}
+
+	public void setRecetteTotale(double recetteTotale) {
+		this.recetteTotale = recetteTotale;
 	}
 
 }
